@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detail Timeline</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<h1>INDONESIA<br>HEROES</h1>
+</div>
+
+<div class="menu">
+
+<a href="index.html">HOME</a>
+<a href="daftar-pahlawan.html">DAFTAR PAHLAWAN</a>
+<a href="timeline.html">TIMELINE</a>
+<a href="quiz.html">QUIZ</a>
+<a href="about.html">ABOUT</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<br><br>
+
+<button class="btn"
+onclick="history.back()">
+
+← Kembali
+
+</button>
+
+<br><br>
+
+<div
+style="background:white;padding:40px;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,.1);">
+
+<h1 id="judul"></h1>
+
+<br>
+
+<p
+id="isi"
+style="line-height:35px;font-size:20px;">
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const id =
+new URLSearchParams(window.location.search).get("id");
+
+const judul =
+document.getElementById("judul");
+
+const isi =
+document.getElementById("isi");
+
+if(id=="budiutomo"){
+
+judul.innerHTML="Budi Utomo";
+
+isi.innerHTML=`
+
+Budi Utomo adalah organisasi pergerakan nasional pertama di Indonesia yang didirikan di Batavia pada 20 Mei 1908 oleh Dr. Sutomo dan para mahasiswa STOVIA.
+
+<br><br>
+
+<b>Penggagas :</b> dr. Wahidin Soedirohusodo.
+
+<br><br>
+
+<b>Pendiri :</b> Dr. Sutomo bersama pelajar STOVIA.
+
+<br><br>
+
+<b>Tujuan :</b> Memajukan pendidikan dan kebudayaan masyarakat pribumi.
+
+<br><br>
+
+Tanggal 20 Mei kemudian ditetapkan sebagai Hari Kebangkitan Nasional.
+
+`;
+
+}
+
+if(id=="sarekatislam"){
+
+judul.innerHTML="Sarekat Islam";
+
+isi.innerHTML=`
+
+Didirikan pada tahun 1912 oleh H.O.S Tjokroaminoto.
+
+Bertujuan meningkatkan kesejahteraan rakyat pribumi dan memperjuangkan persatuan umat Islam Indonesia.
+
+`;
+
+}
+
+if(id=="muhammadiyah"){
+
+judul.innerHTML="Muhammadiyah";
+
+isi.innerHTML=`
+
+Didirikan oleh KH Ahmad Dahlan pada tahun 1912 di Yogyakarta.
+
+Organisasi ini bergerak di bidang pendidikan, kesehatan, dan sosial.
+
+`;
+
+}
+
+if(id=="pki"){
+
+judul.innerHTML="PKI Berdiri";
+
+isi.innerHTML=`
+
+Partai Komunis Indonesia berdiri tahun 1920 dan menjadi salah satu partai politik terbesar sebelum dibubarkan.
+
+`;
+
+}
+
+if(id=="pni"){
+
+judul.innerHTML="PNI Berdiri";
+
+isi.innerHTML=`
+
+PNI didirikan Ir. Soekarno pada tahun 1927 sebagai wadah perjuangan kemerdekaan Indonesia.
+
+`;
+
+}
+
+if(id=="sumpahpemuda"){
+
+judul.innerHTML="Sumpah Pemuda";
+
+isi.innerHTML=`
+
+28 Oktober 1928 menjadi tonggak persatuan bangsa Indonesia melalui ikrar satu tanah air, satu bangsa, dan satu bahasa Indonesia.
+
+`;
+
+}
+
+if(id=="jepang"){
+
+judul.innerHTML="Jepang Masuk Indonesia";
+
+isi.innerHTML=`
+
+Pada tahun 1942 Jepang berhasil menguasai Indonesia setelah mengalahkan Belanda.
+
+`;
+
+}
+
+if(id=="peta"){
+
+judul.innerHTML="PETA Dibentuk";
+
+isi.innerHTML=`
+
+PETA dibentuk oleh Jepang tahun 1943 sebagai pasukan pertahanan yang kemudian menjadi cikal bakal TNI.
+
+`;
+
+}
+
+if(id=="proklamasi"){
+
+judul.innerHTML="Proklamasi Kemerdekaan";
+
+isi.innerHTML=`
+
+17 Agustus 1945 Ir. Soekarno dan Mohammad Hatta memproklamasikan kemerdekaan Indonesia.
+
+`;
+
+}
+
+if(id=="uud1945"){
+
+judul.innerHTML="Pengesahan UUD 1945";
+
+isi.innerHTML=`
+
+18 Agustus 1945 PPKI mengesahkan UUD 1945 sebagai dasar negara Indonesia.
+
+`;
+
+}
+
+if(id=="kemerdekaan"){
+
+judul.innerHTML="Perjuangan Mempertahankan Kemerdekaan";
+
+isi.innerHTML=`
+
+Periode 1945-1949 merupakan masa perjuangan rakyat Indonesia mempertahankan kemerdekaan dari Belanda.
+
+`;
+
+}
+
+if(id=="surabaya"){
+
+judul.innerHTML="Pertempuran Surabaya";
+
+isi.innerHTML=`
+
+10 November 1945 terjadi pertempuran besar di Surabaya yang dipimpin Bung Tomo.
+
+Hari ini diperingati sebagai Hari Pahlawan.
+
+`;
+
+}
+
+if(id=="kmb"){
+
+judul.innerHTML="Konferensi Meja Bundar";
+
+isi.innerHTML=`
+
+Konferensi Meja Bundar tahun 1949 menghasilkan pengakuan kedaulatan Indonesia oleh Belanda.
+
+`;
+
+}
+
+if(id=="kaa"){
+
+judul.innerHTML="Konferensi Asia Afrika";
+
+isi.innerHTML=`
+
+Konferensi Asia Afrika tahun 1955 di Bandung mempererat kerja sama negara-negara Asia dan Afrika.
+
+`;
+
+}
+
+if(id=="g30s"){
+
+judul.innerHTML="G30S/PKI";
+
+isi.innerHTML=`
+
+Peristiwa Gerakan 30 September 1965 menjadi salah satu peristiwa penting dalam sejarah politik Indonesia.
+
+`;
+
+}
+
+if(id=="ordebaru"){
+
+judul.innerHTML="Orde Baru";
+
+isi.innerHTML=`
+
+Era Orde Baru dimulai tahun 1966 di bawah kepemimpinan Presiden Soeharto.
+
+`;
+
+}
+
+if(id=="reformasi"){
+
+judul.innerHTML="Reformasi Indonesia";
+
+isi.innerHTML=`
+
+Reformasi tahun 1998 menandai berakhirnya Orde Baru dan dimulainya era demokrasi yang lebih terbuka di Indonesia.
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detail Pahlawan</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<h1>INDONESIA<br>HEROES</h1>
+
+</div>
+
+<div class="menu">
+
+<a href="index.html">HOME</a>
+
+<a href="daftar-pahlawan.html">DAFTAR PAHLAWAN</a>
+
+<a href="timeline.html">TIMELINE</a>
+
+<a href="quiz.html">QUIZ</a>
+
+<a href="about.html">ABOUT</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<br><br>
+
+<button class="btn"
+onclick="history.back()">
+
+← Kembali
+
+</button>
+
+<br><br>
+
+<div class="hero"
+
+style="align-items:flex-start;">
+
+<div class="hero-image">
+
+<img
+id="foto">
+
+</div>
+
+<div class="hero-text">
+
+<h1 id="nama"></h1>
+
+<br>
+
+<p id="biodata"></p>
+
+<br>
+
+<h2>Perjuangan</h2>
+
+<br>
+
+<p id="perjuangan"></p>
+
+<br>
+
+<h2>Jasa-Jasa</h2>
+
+<br>
+
+<p id="jasa"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const id =
+new URLSearchParams(window.location.search).get("id");
+
+const foto =
+document.getElementById("foto");
+
+const nama =
+document.getElementById("nama");
+
+const biodata =
+document.getElementById("biodata");
+
+const perjuangan =
+document.getElementById("perjuangan");
+
+const jasa =
+document.getElementById("jasa");
+
+if(id=="soekarno"){
+
+foto.src="images/Soekarno.png";
+
+nama.innerHTML="Ir. Soekarno";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> Ir. Soekarno (Bung Karno)
+
+<br><br>
+
+<b>Nama Lahir :</b> Koesno Sosrodihardjo
+
+<br><br>
+
+<b>Lahir :</b> Surabaya, 6 Juni 1901
+
+<br><br>
+
+<b>Wafat :</b> Jakarta, 21 Juni 1970
+
+<br><br>
+
+<b>Agama :</b> Islam
+
+<br><br>
+
+<b>Pendidikan :</b> Technische Hoogeschool te Bandoeng (ITB)
+
+<br><br>
+
+<b>Jabatan :</b> Presiden Pertama Republik Indonesia
+
+`;
+
+perjuangan.innerHTML=`
+
+• Bersama Mohammad Hatta memproklamasikan kemerdekaan Indonesia.
+
+<br><br>
+
+• Merumuskan dasar negara Pancasila.
+
+<br><br>
+
+• Memimpin perjuangan bangsa menuju kemerdekaan.
+
+<br><br>
+
+• Menjadi Presiden pertama Republik Indonesia.
+
+`;
+
+jasa.innerHTML=`
+
+• Membacakan teks Proklamasi.
+
+<br><br>
+
+• Mempersatukan rakyat Indonesia.
+
+<br><br>
+
+• Meletakkan dasar pemerintahan Indonesia.
+
+`;
+
+}
+
+if(id=="kartini"){
+
+foto.src="images/Kartini.png";
+
+nama.innerHTML="R.A Kartini";
+
+biodata.innerHTML=`
+
+<b>Lahir :</b> Jepara, 21 April 1879
+
+<br><br>
+
+<b>Wafat :</b> Rembang, 17 September 1904
+
+<br><br>
+
+<b>Julukan :</b> Pelopor Emansipasi Wanita Indonesia
+
+`;
+
+perjuangan.innerHTML=`
+
+Memperjuangkan hak perempuan Indonesia terutama dalam pendidikan.
+
+`;
+
+jasa.innerHTML=`
+
+Membuka jalan bagi pendidikan perempuan Indonesia dan menjadi inspirasi emansipasi wanita.
+
+`;
+
+}
+
+if(id=="sudirman"){
+
+foto.src="images/Jenderal Sudirman.png";
+
+nama.innerHTML="Jenderal Sudirman";
+
+biodata.innerHTML=`
+
+<b>Lahir :</b> Purbalingga, 24 Januari 1916
+
+<br><br>
+
+<b>Wafat :</b> Magelang, 29 Januari 1950
+
+<br><br>
+
+<b>Julukan :</b> Panglima Besar TNI Pertama
+
+`;
+
+perjuangan.innerHTML=`
+
+Memimpin perang gerilya mempertahankan kemerdekaan Indonesia melawan Belanda.
+
+`;
+
+jasa.innerHTML=`
+
+Menjadi simbol perjuangan dan kepemimpinan TNI Indonesia.
+
+`;
+
+}
+
+if(id=="cutnyakdien"){
+
+foto.src="images/Cut Nyak Dien.png";
+
+nama.innerHTML="Cut Nyak Dien";
+
+biodata.innerHTML=`
+
+<b>Lahir :</b> Lampadang, Aceh Besar, sekitar tahun 1848
+
+<br><br>
+
+<b>Wafat :</b> Sumedang, 6 November 1908
+
+<br><br>
+
+<b>Julukan :</b> Srikandi dari Aceh
+
+`;
+
+perjuangan.innerHTML=`
+
+Memimpin rakyat Aceh melawan penjajah Belanda dengan semangat yang luar biasa.
+
+`;
+
+jasa.innerHTML=`
+
+Menjadi simbol keberanian perempuan Indonesia dalam perjuangan kemerdekaan.
+
+`;
+
+}
+// ===============================
+// DEWI SARTIKA
+// ===============================
+
+if(id=="dewisartika"){
+
+foto.src="images/Dewi Sartika.png";
+
+nama.innerHTML="Dewi Sartika";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> Dewi Sartika
+
+<br><br>
+
+<b>Tempat, Tanggal Lahir :</b> Bandung, 4 Desember 1884
+
+<br><br>
+
+<b>Wafat :</b> Tasikmalaya, 11 September 1947
+
+<br><br>
+
+<b>Agama :</b> Islam
+
+<br><br>
+
+<b>Julukan :</b> Pelopor Pendidikan Perempuan Indonesia
+
+`;
+
+perjuangan.innerHTML=`
+
+• Mendirikan Sekolah Istri di Bandung tahun 1904.
+
+<br><br>
+
+• Memperjuangkan pendidikan bagi kaum perempuan.
+
+<br><br>
+
+• Mengajarkan keterampilan dan ilmu pengetahuan kepada wanita pribumi.
+
+`;
+
+jasa.innerHTML=`
+
+• Pelopor pendidikan perempuan Indonesia.
+
+<br><br>
+
+• Menginspirasi lahirnya sekolah perempuan di berbagai daerah.
+
+`;
+
+}
+
+
+// ===============================
+// DR SOEPOMO
+// ===============================
+
+if(id=="soepomo"){
+
+foto.src="images/Dr.Soepomo.png";
+
+nama.innerHTML="Dr. Soepomo";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> Prof. Mr. Dr. Soepomo
+
+<br><br>
+
+<b>Tempat, Tanggal Lahir :</b> Sukoharjo, 22 Januari 1903
+
+<br><br>
+
+<b>Wafat :</b> Jakarta, 12 September 1958
+
+<br><br>
+
+<b>Julukan :</b> Arsitek UUD 1945
+
+`;
+
+perjuangan.innerHTML=`
+
+• Menjadi anggota BPUPKI.
+
+<br><br>
+
+• Merumuskan dasar negara Indonesia.
+
+<br><br>
+
+• Menyusun UUD 1945.
+
+`;
+
+jasa.innerHTML=`
+
+• Berperan besar dalam penyusunan UUD 1945.
+
+<br><br>
+
+• Menjadi Menteri Kehakiman pertama Indonesia.
+
+`;
+
+}
+
+
+// ===============================
+// KI HADJAR DEWANTARA
+// ===============================
+
+if(id=="kihadjar"){
+
+foto.src="images/Ki Hadjar Dewantara.png";
+
+nama.innerHTML="Ki Hadjar Dewantara";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> R.M. Soewardi Soerjaningrat
+
+<br><br>
+
+<b>Tempat, Tanggal Lahir :</b> Yogyakarta, 2 Mei 1889
+
+<br><br>
+
+<b>Wafat :</b> Yogyakarta, 26 April 1959
+
+<br><br>
+
+<b>Julukan :</b> Bapak Pendidikan Nasional
+
+`;
+
+perjuangan.innerHTML=`
+
+• Mendirikan Perguruan Taman Siswa.
+
+<br><br>
+
+• Memperjuangkan pendidikan untuk seluruh rakyat Indonesia.
+
+`;
+
+jasa.innerHTML=`
+
+• Tokoh pendidikan Indonesia.
+
+<br><br>
+
+• Hari lahirnya diperingati sebagai Hari Pendidikan Nasional.
+
+`;
+
+}
+
+
+// ===============================
+// MOHAMMAD HATTA
+// ===============================
+
+if(id=="hatta"){
+
+foto.src="images/Mohammad Hatta.png";
+
+nama.innerHTML="Mohammad Hatta";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> Drs. Mohammad Hatta
+
+<br><br>
+
+<b>Tempat, Tanggal Lahir :</b> Bukittinggi, 12 Agustus 1902
+
+<br><br>
+
+<b>Wafat :</b> Jakarta, 14 Maret 1980
+
+<br><br>
+
+<b>Julukan :</b> Bapak Koperasi Indonesia
+
+`;
+
+perjuangan.innerHTML=`
+
+• Mendampingi Soekarno memproklamasikan kemerdekaan Indonesia.
+
+<br><br>
+
+• Menjadi Wakil Presiden pertama Indonesia.
+
+`;
+
+jasa.innerHTML=`
+
+• Proklamator Indonesia.
+
+<br><br>
+
+• Mengembangkan koperasi Indonesia.
+
+`;
+
+}
+
+
+// ===============================
+// PANGERAN DIPONEGORO
+// ===============================
+
+if(id=="diponegoro"){
+
+foto.src="images/Pangeran Diponegoro.png";
+
+nama.innerHTML="Pangeran Diponegoro";
+
+biodata.innerHTML=`
+
+<b>Nama Lengkap :</b> Bendara Raden Mas Mustahar
+
+<br><br>
+
+<b>Tempat, Tanggal Lahir :</b> Yogyakarta, 11 November 1785
+
+<br><br>
+
+<b>Wafat :</b> Makassar, 8 Januari 1855
+
+<br><br>
+
+<b>Julukan :</b> Pahlawan Perang Jawa
+
+`;
+
+perjuangan.innerHTML=`
+
+• Memimpin Perang Jawa tahun 1825-1830.
+
+<br><br>
+
+• Menggerakkan rakyat melawan Belanda.
+
+`;
+
+jasa.innerHTML=`
+
+• Menjadi simbol perjuangan melawan kolonialisme.
+
+`;
+
+}
+
+
+// ===============================
+// PANGERAN ANTASARI
+// ===============================
+
+if(id=="antasari"){
+
+foto.src="images/Pangeran Antasari.png";
+
+nama.innerHTML="Pangeran Antasari";
+
+biodata.innerHTML=`
+
+<b>Tempat, Tanggal Lahir :</b> Banjar, 1797
+
+<br><br>
+
+<b>Wafat :</b> Hulu Sungai, 11 Oktober 1862
+
+<br><br>
+
+<b>Julukan :</b> Pahlawan Perang Banjar
+
+`;
+
+perjuangan.innerHTML=`
+
+• Memimpin Perang Banjar melawan Belanda.
+
+`;
+
+jasa.innerHTML=`
+
+• Menyatukan rakyat Banjar melawan penjajah.
+
+`;
+
+}
+
+
+// ===============================
+// SULTAN HASANUDDIN
+// ===============================
+
+if(id=="hasanuddin"){
+
+foto.src="images/Sultan Hasanuddin.png";
+
+nama.innerHTML="Sultan Hasanuddin";
+
+biodata.innerHTML=`
+
+<b>Tempat, Tanggal Lahir :</b> Makassar, 12 Januari 1631
+
+<br><br>
+
+<b>Wafat :</b> Makassar, 12 Juni 1670
+
+<br><br>
+
+<b>Julukan :</b> Ayam Jantan dari Timur
+
+`;
+
+perjuangan.innerHTML=`
+
+• Memimpin Kesultanan Gowa melawan VOC.
+
+`;
+
+jasa.innerHTML=`
+
+• Menjadi simbol keberanian rakyat Sulawesi Selatan.
+
+`;
+
+}
+
+
+// ===============================
+// SUTOMO (BUNG TOMO)
+// ===============================
+
+if(id=="sutomo"){
+
+foto.src="images/Sutomo.png";
+
+nama.innerHTML="Sutomo (Bung Tomo)";
+
+biodata.innerHTML=`
+
+<b>Tempat, Tanggal Lahir :</b> Surabaya, 3 Oktober 1920
+
+<br><br>
+
+<b>Wafat :</b> Arab Saudi, 7 Oktober 1981
+
+<br><br>
+
+<b>Julukan :</b> Bung Tomo
+
+`;
+
+perjuangan.innerHTML=`
+
+• Mengobarkan semangat rakyat Surabaya melalui pidato-pidatonya.
+
+<br><br>
+
+• Memimpin perjuangan mempertahankan kemerdekaan Indonesia.
+
+`;
+
+jasa.innerHTML=`
+
+• Ikon Pertempuran Surabaya 10 November 1945.
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>

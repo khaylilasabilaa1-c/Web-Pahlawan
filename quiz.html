@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Pahlawan</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<h1>INDONESIA<br>HEROES</h1>
+
+</div>
+
+<div class="menu">
+
+<a href="index.html">HOME</a>
+
+<a href="daftar-pahlawan.html">DAFTAR PAHLAWAN</a>
+
+<a href="timeline.html">TIMELINE</a>
+
+<a href="quiz.html">QUIZ</a>
+
+<a href="about.html">ABOUT</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1 class="section-title">
+
+QUIZ PAHLAWAN INDONESIA
+
+</h1>
+
+<div id="quizBox">
+
+</div>
+
+<br>
+
+<h2 id="hasil"></h2>
+
+<br>
+
+<button class="btn"
+
+onclick="cekQuiz()">
+
+CEK JAWABAN
+
+</button>
+
+<button class="btn2"
+
+onclick="location.reload()">
+
+ULANGI
+
+</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script>
+
+const soal=[
+
+{
+
+q:"Siapa Presiden pertama Indonesia?",
+
+o:["Kartini","Soekarno","Soedirman","Cut Nyak Dien"],
+
+a:"Soekarno"
+
+},
+
+{
+
+q:"Siapa pelopor emansipasi wanita?",
+
+o:["Kartini","Soekarno","Cut Nyak Dien","Moh Hatta"],
+
+a:"Kartini"
+
+},
+
+{
+
+q:"Siapa Panglima Besar TNI pertama?",
+
+o:["Soedirman","Diponegoro","Kartini","Soekarno"],
+
+a:"Soedirman"
+
+},
+
+{
+
+q:"Siapa Srikandi Aceh?",
+
+o:["Kartini","Martha Christina","Cut Nyak Dien","Fatmawati"],
+
+a:"Cut Nyak Dien"
+
+},
+
+{
+
+q:"Kapan Proklamasi Kemerdekaan Indonesia?",
+
+o:["17 Agustus 1945","28 Oktober 1928","20 Mei 1908","18 Agustus 1945"],
+
+a:"17 Agustus 1945"
+
+}
+
+];
+
+const quiz=document.getElementById("quizBox");
+
+for(let i=0;i<soal.length;i++){
+
+quiz.innerHTML+=`
+
+<div style="background:white;padding:25px;margin-bottom:25px;border-radius:15px;">
+
+<h2>${i+1}. ${soal[i].q}</h2>
+
+<br>
+
+<label>
+
+<input type="radio" name="q${i}" value="${soal[i].o[0]}">
+
+${soal[i].o[0]}
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="radio" name="q${i}" value="${soal[i].o[1]}">
+
+${soal[i].o[1]}
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="radio" name="q${i}" value="${soal[i].o[2]}">
+
+${soal[i].o[2]}
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="radio" name="q${i}" value="${soal[i].o[3]}">
+
+${soal[i].o[3]}
+
+</label>
+
+</div>
+
+`;
+
+}
+
+function cekQuiz(){
+
+let skor=0;
+
+for(let i=0;i<soal.length;i++){
+
+let pilih=document.querySelector(
+
+'input[name=q'+i+']:checked'
+
+);
+
+if(pilih){
+
+if(pilih.value==soal[i].a){
+
+skor++;
+
+}
+
+}
+
+}
+
+document.getElementById("hasil").innerHTML=
+
+"Skor Kamu : "+skor+"/5";
+
+if(skor==5){
+
+confetti({
+
+particleCount:250,
+
+spread:180
+
+});
+
+}
+
+else{
+
+let h=document.getElementById("hasil");
+
+h.innerHTML+="<br><br>❌ Coba Lagi";
+
+h.classList.add("salah");
+}
+}
+</script>
+
+</body>
+
+</html>
